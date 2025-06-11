@@ -17,8 +17,6 @@ if time_diff < 0.01:
 else:
     print(f"あなたの反応速度は:{timediff}秒です。")
 
-            
-
  
 
  
