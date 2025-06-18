@@ -3,7 +3,7 @@ import random
 
 print("合図が出たらenterを押す")
 
-sec = random.uniform(5,15)
+sec = random.uniform(1,10)
 time.sleep(sec)
 print("押せぇぇぇ！！！！")
 start = time.time()
