@@ -76,7 +76,7 @@ print(max_miss, "間違えたらゲームオーバーです")
 print()
 
 
-def classify(word):
+def eiwa(word):
     has_japanese = bool(re.search(r"[\u3040-\u30FF\u4E00-\u9FFF]", word))
     has_english = bool(re.search(r"[a-zA-Z]", word))
 
@@ -88,7 +88,7 @@ def classify(word):
         return "英語だけのアーティスト名です"
 
 
-print(classify(word))
+print(eiwa(word))
 print("単語:", " ".join(mojisuu))
 print("アーティスト名がわかったら入力するところに”わかった”と入力してください")
 used_word = []
@@ -98,7 +98,7 @@ while "_" in mojisuu:
     itimoji = input("１文字入力してください")
     if itimoji == "わかった":
         kotae = input("答えを入力してください")
-        if kotae == kotae:
+        if kotae == word:
             print("正解です")
             print("ミスの回数" + str(misu) + "/" + str(max_miss))
             end = time.time()
@@ -113,10 +113,10 @@ while "_" in mojisuu:
     for i in range(len(word_list)):
         if itimoji == word_list[i]:
             mojisuu[i] = itimoji
+    if itimoji != "わかった":
+        used_word.append(itimoji)
 
-    used_word.append(itimoji)
-
-    if (itimoji not in word_list) and bool("わかった"):
+    if itimoji != "わかった" and itimoji not in word_list:
         misu += 1
         if misu >= max_miss:
             print("ゲームオーバーです。正解は,", word)
