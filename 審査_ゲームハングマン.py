@@ -28,7 +28,7 @@ elif difficult == "hard":
     max_miss = 8
 else:
     max_miss = 10
-print(max_miss, "間違えたらゲームオーバーです")
+print(max_miss, "回間違えたらゲームオーバーです")
 print()
 
 
