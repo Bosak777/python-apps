@@ -3,7 +3,7 @@ import random
 
 print("合図が出たらenterを押す")
 
-sec = random.uniform(1,10)
+sec = random.uniform(1, 10)
 time.sleep(sec)
 print("押せぇぇぇ！！！！")
 start = time.time()
@@ -16,7 +16,3 @@ if time_diff < 0.01:
     pass
 else:
     print(f"あなたの反応速度は:{timediff}秒です。")
-
- 
-
- 
