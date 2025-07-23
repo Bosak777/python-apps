@@ -1,8 +1,7 @@
-print("test")
-
-print("input_line")
 import random
-r = random.randint(1,100)
+
+
+r = random.randint(1, 100)
 print(r)
 p = "大不正解　もう一度試してみて！"
 print("1~100までの数字を当ててください")
@@ -12,22 +11,21 @@ else:
     print("50以上です")
 count = 0
 for i in range(5):
-     w = int(input())
-     count += 1
-     print(f"あなたが入力した数字は、{w}です。")
-     if w == r:
+    w = int(input())
+    count += 1
+    print(f"あなたが入力した数字は、{w}です。")
+    if w == r:
         print(f"大正解！！{count}回で当てました。")
         break
-     else:
+    else:
         print("大不正解！！もう一度")
         if w < r:
             print(f"その数は{w}より大きい")
         else:
-            print(f"その数は{w}はより小さい") 
-            
+            print(f"その数は{w}はより小さい")
 if w == r:
     pass
-else:         
+else:
     print("もう一回やりますか〜？？やるなら yes をやめるならww no を:")
     w = input()
     if w == "yes":
@@ -37,7 +35,7 @@ else:
             w = int(input())
             count += 1
             print(f"あなたが入力した数字は、{w}です")
-            if w ==r:
+            if w == r:
                 print(f"大正解！！{count}回で当てました")
                 break
             else:
@@ -47,16 +45,8 @@ else:
                 elif r > 75:
                     print("75より大きいです")
                 else:
-                    print("25〜75の間です")   
+                    print("25〜75の間です")
     else:
         print("また挑戦しにこいよ！")
-        
+
 print(f"正解は{r}でした。")
-
-
-            
-            
-
- 
-
- 
