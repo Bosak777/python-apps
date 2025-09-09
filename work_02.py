@@ -8,7 +8,7 @@ print(dt_now)
 
 # MySQLサーバーへの接続情報
 conn = mysql.connector.connect(
-    host="localhost", user="root", password="bosaklong", 
+    host="localhost", user="root", password="bosaklong",
     database="python_reflexes"
 )
 
