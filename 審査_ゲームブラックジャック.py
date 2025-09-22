@@ -36,7 +36,6 @@ import mysql.connector
 
 
 # -------------------ここからは、対人のブラックジャック-----------------------------------
-
 # mysqlサーバーへの接続情報
 conn = mysql.connector.connect(
     host='localhost',
@@ -154,11 +153,6 @@ if total_games > 0:
     print(f"勝率: {win_rate}%")
 else:
     print("まだ試合データがありません")
-# データをテーブルに挿入
-insert = "insert into blackjack_app(blackjack_winningrate) values(%s)"
-data = (win_rate,)
-cursor.execute(insert, data)
-conn.commit()
 #  データを削除して１から開始
 reset = input("データをリセットしますか？リセットするならyesと入力してください")
 if reset == "yes":
